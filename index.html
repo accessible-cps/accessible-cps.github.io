@@ -18,7 +18,7 @@
     }
     * { box-sizing: border-box; }
     body {
-      margin: 0; font-family: ui-sans-serif, system-ui; background: var(--bg); color: var(--muted); line-height: 1.6;
+      margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--muted); line-height: 1.6;
       background: radial-gradient(1200px 800px at 80% -10%, rgba(138,197,255,0.15), transparent 60%),
                   radial-gradient(1000px 600px at -20% 0%, rgba(141,240,217,0.12), transparent 60%), var(--bg);
     }
@@ -35,11 +35,16 @@
     .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
     .card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius); padding: 18px; }
     .card h3 { color: var(--text); margin: 0 0 8px; }
+    .card p { color: #d1dce7; font-size: 15px; line-height: 1.6; letter-spacing: 0.01em; }
     .about-box { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius); padding: var(--pad); }
+    .about-box p { color: #d1dce7; font-size: 16px; line-height: 1.7; letter-spacing: 0.01em; }
+    .about-box ul li { color: #d1dce7; font-size: 16px; line-height: 1.7; letter-spacing: 0.01em; margin-bottom: 8px; }
     .section-title { color: var(--text); font-size: 24px; margin: 0 0 12px; }
     .people { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
     .person { background: var(--card); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius); padding: 16px; text-align: center; }
     .person img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 14px; margin-bottom: 10px; border: 1px solid rgba(255,255,255,0.08); }
+    .person h4 { color: #7bb3ff; margin: 0 0 6px; font-weight: 600; font-size: 16px; }
+    .person .affil { color: #a8bdd1; font-size: 14px; margin: 0; }
     
     /* Research Gallery Styles */
     .research-gallery { overflow: hidden; position: relative; margin: 20px 0; }
@@ -167,6 +172,32 @@
       </div>
     </section>
 
+    <section id="speakers">
+      <h2 class="section-title">Speakers</h2>
+      <div class="people">
+        <a class="person" href="https://lab.rekimoto.org/" target="_blank">
+          <img src="./images/speakers/jun.png" alt="Jun Rekimoto portrait" />
+          <h4>Jun Rekimoto</h4>
+          <p class="affil">The University of Tokyo</p>
+        </a>
+        <a class="person" href="https://www.ibm.com/history/chieko-asakawa" target="_blank">
+          <img src="./images/speakers/chieko.jpg" alt="Chieko Asakawa portrait" />
+          <h4>Chieko Asakawa</h4>
+          <p class="affil">IBM Research</p>
+        </a>
+        <a class="person" href="https://www.cs.cmu.edu/~jbigham/" target="_blank">
+          <img src="./images/speakers/jeff.jpg" alt="Jeff Bigham portrait" />
+          <h4>Jeff Bigham</h4>
+          <p class="affil">Carnegie Mellon University</p>
+        </a>
+        <div class="person" style="border: 2px dashed rgba(255,255,255,0.2); cursor: default;">
+          <div style="width: 100%; aspect-ratio: 1 / 1; border-radius: 14px; margin-bottom: 10px; border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.02); display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 32px;">+</div>
+          <h4 style="color: var(--muted);">More Speakers</h4>
+          <p class="affil">Coming Soon!</p>
+        </div>
+      </div>
+    </section>
+
     <section id="organizers">
       <h2 class="section-title">Organizers</h2>
       <div class="people">
@@ -216,7 +247,7 @@
     <section id="questions">
       <h2 class="section-title">Questions?</h2>
       <div class="about-box">
-        <p>If you have any questions about the workshop or registration, please email:
+        <p>If you have any questions about the workshop or registration, or have any accessibility needs, please email:
           <a href="mailto:rarakawa@cs.cmu.edu,mingzhe2@cs.cmu.edu">Contact Us</a>.
         </p>
       </div>
