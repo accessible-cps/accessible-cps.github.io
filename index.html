@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Accessible Cyber‑Physical Activities – UIST 2025 Workshop</title>
+  <meta name="description" content="UIST 2025 workshop on Accessible Cyber-Physical Activities: context sensing, AI, AR/MR, and robotics for everyday accessibility." />
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #0f1a33;
+      --muted: #9fb3c8;
+      --text: #eef6ff;
+      --accent: #6aa7ff;
+      --maxw: 1100px;
+      --radius: 20px;
+      --pad: clamp(16px, 3vw, 28px);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--muted); line-height: 1.6;
+      background: radial-gradient(1200px 800px at 80% -10%, rgba(138,197,255,0.15), transparent 60%),
+                  radial-gradient(1000px 600px at -20% 0%, rgba(141,240,217,0.12), transparent 60%), var(--bg);
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--pad); }
+    header.hero { padding: 72px 0 48px; text-align: center; }
+    .badge { display: inline-block; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); color: var(--text); padding: 6px 10px; border-radius: 999px; font-size: 14px; }
+    h1.title { color: var(--text); font-size: clamp(28px, 5vw, 44px); margin: 14px 0 10px; }
+    p.subtitle { margin: 0 0 22px; color: var(--muted); font-size: 18px; }
+    .cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 16px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 16px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.12); background: linear-gradient(135deg, rgba(106,167,255,0.15), rgba(141,240,217,0.15)); color: var(--text); font-weight: 600; }
+    section { padding: 42px 0; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+    .card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius); padding: 18px; }
+    .card h3 { color: var(--text); margin: 0 0 8px; }
+    .card p { color: #d1dce7; font-size: 15px; line-height: 1.6; letter-spacing: 0.01em; }
+    .about-box { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius); padding: var(--pad); }
+    .about-box p { color: #d1dce7; font-size: 16px; line-height: 1.7; letter-spacing: 0.01em; }
+    .about-box ul li { color: #d1dce7; font-size: 16px; line-height: 1.7; letter-spacing: 0.01em; margin-bottom: 8px; }
+    .section-title { color: var(--text); font-size: 24px; margin: 0 0 12px; }
+    .people { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+    .person { background: var(--card); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius); padding: 16px; text-align: center; }
+    .person img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 14px; margin-bottom: 10px; border: 1px solid rgba(255,255,255,0.08); }
+    .person h4 { color: #7bb3ff; margin: 0 0 6px; font-weight: 600; font-size: 16px; }
+    .person .affil { color: #a8bdd1; font-size: 14px; margin: 0; }
+    
+    /* Research Gallery Styles */
+    .research-gallery { overflow: hidden; position: relative; margin: 20px 0; }
+    .research-slider { display: flex; animation: slide 20s infinite linear; gap: 12px; }
+    .research-item { flex: 0 0 auto; }
+    .research-item a { display: block; line-height: 0; }
+    .research-item img { 
+      width: 200px; height: 150px; object-fit: cover; border-radius: 12px; 
+      border: 1px solid rgba(255,255,255,0.12); transition: transform 0.3s ease;
+    }
+    .research-item:hover img { transform: scale(1.05); }
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    
+    footer { padding: 40px 0; color: #9fb3c8; font-size: 14px; border-top: 1px dashed rgba(255,255,255,0.1); margin-top: 40px; text-align: center; }
+    @media (max-width: 900px) { .cards, .people { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <span class="badge">UIST 2025 Workshop • Busan, Republic of Korea</span>
+      <h1 class="title">Accessible Cyber‑Physical Activities</h1>
+      <p class="subtitle">September 28, 2025</p>
+      <div class="cta-row">
+        <a class="btn" href="" target="_blank">Register (Google Form)</a>
+        <a class="btn" href="https://uist.acm.org/2025/" target="_blank">UIST 2025 Main Site</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="research-gallery">
+      <h2 class="section-title"></h2>
+      <div class="research-gallery">
+        <div class="research-slider">
+          <div class="research-item">
+            <a href="https://franklin-li.com/Contextual%20Inquiry%20Cooking%201.pdf" target="_blank">
+              <img src="./images/research_thumbnails/research_1.png" alt="Accessibility support for cooking" />
+            </a>
+          </div>
+          <div class="research-item">
+            <a href="https://arxiv.org/abs/2501.13258" target="_blank">
+              <img src="./images/research_thumbnails/research_2.png" alt="VR accessibility" />
+            </a>
+          </div>
+          <div class="research-item">
+            <a href="https://rikky0611.github.io/resource/paper/prism-tracker_imwut2022_paper.pdf" target="_blank">
+              <img src="./images/research_thumbnails/research_3.png" alt="Context sensing" />
+            </a>
+          </div>
+          <div class="research-item">
+            <a href="https://franklin-li.com/Accessible%20Robot.pdf" target="_blank">
+              <img src="./images/research_thumbnails/research_4.png" alt="Accessibility robot" />
+            </a>
+          </div>
+          <div class="research-item">
+            <a href="https://arxiv.org/abs/2407.13515" target="_blank">
+              <img src="./images/research_thumbnails/research_5.png" alt="AR accessibility" />
+            </a>
+          </div>
+          <div class="research-item">
+            <a href="https://arxiv.org/abs/2506.00717" target="_blank">
+              <img src="./images/research_thumbnails/research_6.jpeg" alt="Accessible task assistant" />
+            </a>
+          </div>
+          <div class="research-item">
+            <a href="https://www.arxiv.org/abs/2508.02958" target="_blank">
+              <img src="./images/research_thumbnails/research_7.png" alt="Accessible VR" />
+            </a>
+          </div>
+          <!-- Duplicate items for seamless loop -->
+          <div class="research-item">
+            <a href="https://franklin-li.com/Contextual%20Inquiry%20Cooking%201.pdf" target="_blank">
+              <img src="./images/research_thumbnails/research_1.png" alt="Accessibility support for cooking" />
+            </a>
+          </div>
+          <div class="research-item">
+            <a href="https://arxiv.org/abs/2501.13258" target="_blank">
+              <img src="./images/research_thumbnails/research_2.png" alt="VR accessibility" />
+            </a>
+          </div>
+          <div class="research-item">
+            <a href="https://rikky0611.github.io/resource/paper/prism-tracker_imwut2022_paper.pdf" target="_blank">
+              <img src="./images/research_thumbnails/research_3.png" alt="Context sensing" />
+            </a>
+          </div>
+          <div class="research-item">
+            <a href="https://franklin-li.com/Accessible%20Robot.pdf" target="_blank">
+              <img src="./images/research_thumbnails/research_4.png" alt="Accessibility robot" />
+            </a>
+          </div>
+          <div class="research-item">
+            <a href="https://arxiv.org/abs/2407.13515" target="_blank">
+              <img src="./images/research_thumbnails/research_5.png" alt="AR accessibility" />
+            </a>
+          </div>
+          <div class="research-item">
+            <a href="https://arxiv.org/abs/2506.00717" target="_blank">
+              <img src="./images/research_thumbnails/research_6.jpeg" alt="Accessible task assistant" />
+            </a>
+          </div>
+          <div class="research-item">
+            <a href="https://www.arxiv.org/abs/2508.02958" target="_blank">
+              <img src="./images/research_thumbnails/research_7.png" alt="Accessible VR" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="dates">
+      <h2 class="section-title">Important Dates</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Workshop</h3>
+          <p><strong>Sept 28, 2025 (Sun)</strong> at UIST 2025, Busan.</p>
+        </article>
+        <article class="card">
+          <h3>Google Form Registration Deadline</h3>
+          <p><em>TBD</em> — Information in your application can be updated until this deadline.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">About the Workshop</h2>
+      <div class="about-box">
+        <p>Recent advances in context sensing, generative AI, robotics, and augmented/mixed reality have created unprecedented opportunities to design cyber-physical systems that meaningfully support accessibility and inclusion in everyday life. These intelligent systems can sense the environment, interpret user goals, and provide adaptive, real-time support, enabling people with disabilities to engage confidently in daily activities ranging from cooking and personal care to creative expression and skill acquisition. However, realizing this potential requires addressing critical challenges in sensing, interaction design, adaptability, and evaluation to ensure systems are trustworthy, user-centered, and extend rather than replace human capabilities. This workshop brings together researchers and designers across HCI, AI, AR/VR, accessibility, and robotics to explore the design and evaluation of accessible cyber-physical systems.</p>
+      </div>
+    </section>
+
+    <section id="program">
+      <h2 class="section-title">Program</h2>
+      <div class="about-box">
+        <p><strong>Detailed program coming soon!</strong></p>
+        <p>The workshop will feature:</p>
+        <ul>
+          <li><strong>Keynote presentations</strong> from 2-3 speakers</li>
+          <li><strong>Panel discussion</strong> with experts in the field</li>
+          <li><strong>Interactive poster presentations</strong> by workshop attendees</li>
+        </ul>
+      </div>
+    </section>
+
+<!--     <section id="speakers">
+      <h2 class="section-title">Speakers</h2>
+      <div class="people">
+        <div class="person" style="border: 2px dashed rgba(255,255,255,0.2); cursor: default;">
+          <div style="width: 100%; aspect-ratio: 1 / 1; border-radius: 14px; margin-bottom: 10px; border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.02); display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 32px;">+</div>
+          <h4 style="color: var(--muted);">More Speakers</h4>
+          <p class="affil">Coming Soon!</p>
+        </div>
+      </div>
+    </section> -->
+
+    <section id="organizers">
+      <h2 class="section-title">Organizers</h2>
+      <div class="people">
+        <a class="person" href="https://rikky0611.github.io/" target="_blank">
+          <img src="./images/organizers/riku.jpg" alt="Riku Arakawa portrait" />
+          <h4>Riku Arakawa</h4>
+          <p class="affil">Carnegie Mellon University</p>
+        </a>
+        <a class="person" href="https://franklin-li.com/" target="_blank">
+          <img src="./images/organizers/franklin.jpg" alt="Franklin Mingzhe Li portrait" />
+          <h4>Franklin Mingzhe Li</h4>
+          <p class="affil">Carnegie Mellon University</p>
+        </a>
+        <a class="person" href="https://nandi-zhang.github.io/" target="_blank">
+          <img src="./images/organizers/nandi.jpeg" alt="Nandi Zhang portrait" />
+          <h4>Nandi Zhang</h4>
+          <p class="affil">University of Rochester</p>
+        </a>
+        <a class="person" href="https://minahuh.com/" target="_blank">
+          <img src="./images/organizers/mina.png" alt="Mina Huh portrait" />
+          <h4>Mina Huh</h4>
+          <p class="affil">The University of Texas at Austin</p>
+        </a>
+        <a class="person" href="https://amypavel.com/" target="_blank">
+          <img src="./images/organizers/amy.png" alt="Amy Pavel portrait" />
+          <h4>Amy Pavel</h4>
+          <p class="affil">University of California, Berkeley</p>
+        </a>
+        <a class="person" href="https://ryosuzuki.org/" target="_blank">
+          <img src="./images/organizers/ryo.avif" alt="Ryo Suzuki portrait" />
+          <h4>Ryo Suzuki</h4>
+          <p class="affil">University of Colorado Boulder</p>
+        </a>
+        <a class="person" href="https://patrickcarrington.com/" target="_blank">
+          <img src="./images/organizers/patrick.jpg" alt="Patrick Carrington portrait" />
+          <h4>Patrick Carrington</h4>
+          <p class="affil">Carnegie Mellon University</p>
+        </a>
+        <a class="person" href="https://rochester-bear-lab.github.io/yukang" target="_blank">
+          <img src="./images/organizers/yukang.png" alt="Yukang Yan portrait" />
+          <h4>Yukang Yan</h4>
+          <p class="affil">University of Rochester</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="questions">
+      <h2 class="section-title">Questions?</h2>
+      <div class="about-box">
+        <p>If you have any questions about the workshop or registration, or have any accessibility needs, please email:
+          <a href="mailto:rarakawa@cs.cmu.edu,mingzhe2@cs.cmu.edu">Contact Us</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>© 2025 UIST Workshop. Hosted on GitHub Pages.</p>
+    </div>
+  </footer>
+</body>
+</html>
